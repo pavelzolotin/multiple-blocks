@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "multiple-blocks/gb-button",
+	"title": "GB Button",
+	"category": "multiple-category",
+	"icon": "button",
+	"description": "A button block.",
+	"keywords": ["block", "button"],
+	"supports": {
+		"html": false
+	},
+	"textdomain": "multiple-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"url": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "href"
+		},
+		"title": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "a",
+			"attribute": "title"
+		},
+		"text": {
+			"type": "string",
+			"source": "html",
+			"selector": "a"
+		},
+		"textAlignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"gbButtonWidth": {
+			"type": "boolean",
+			"default": false
+		}
+	}
+}

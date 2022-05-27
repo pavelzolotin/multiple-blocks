@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-multiple-blocks-gb-button {
+	&.block-editor-block-list__block.wp-block {
+		max-width: 1140px;
+	}
+}
+
+.wp-block-multiple-blocks-gb-button
+	> .wp-block-multiple-blocks-gb-button__wrapper
+	> .wp-block-multiple-blocks-gb-button__btn
+	> .wp-block-multiple-blocks-gb-button__btn-text
+	> a:focus {
+	outline: none;
+}
+
+.wp-block-multiple-blocks-gb-button
+	> .wp-block-multiple-blocks-gb-button__wrapper
+	> .wp-block-multiple-blocks-gb-button__btn
+	> .wp-block-multiple-blocks-gb-button__btn-text
+	> a {
+	font-size: 24px;
+	color: #fff;
+	outline: none;
+	box-shadow: none;
+	text-decoration: none;
+}
+
+.components-button.wp-block-multiple-blocks-gb-button__btn:focus {
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+}
