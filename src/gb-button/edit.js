@@ -17,6 +17,7 @@ import {
 	AlignmentToolbar,
 	RichText,
 	InspectorControls,
+	URLInput,
 } from '@wordpress/block-editor';
 import { PanelBody, ToggleControl } from '@wordpress/components';
 /**
@@ -51,6 +52,10 @@ function ButtonEdit(props) {
 		setAttributes({ textAlignment: newAlignment });
 	};
 
+	const onChangeURL = (newURL) => {
+		setAttributes({ url: newURL });
+	};
+
 	const alignClasses = classnames(`gb-button-align-${textAlignment}`);
 
 	return (
@@ -76,6 +81,11 @@ function ButtonEdit(props) {
 						}}
 						checked={gbButtonWidth}
 					/>
+					<URLInput
+						className="wp-block-multiple-blocks-gb-button__input"
+						value={url}
+						onChange={onChangeURL}
+					/>
 				</PanelBody>
 			</InspectorControls>
 			<div
@@ -99,6 +109,7 @@ function ButtonEdit(props) {
 								value={text}
 								onChange={(value) => setButtonText(value)}
 								identifier="text"
+								allowedFormats={['core/bold', 'core/italic']}
 							/>
 						</div>
 					</div>

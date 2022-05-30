@@ -27,7 +27,7 @@ import classnames from 'classnames';
  */
 
 export default function save({ attributes }) {
-	const { url, text, title, textAlignment, gbButtonWidth } = attributes;
+	const { url, text, textAlignment, gbButtonWidth } = attributes;
 
 	const alignClasses = classnames(`gb-button-align-${textAlignment}`);
 
@@ -37,36 +37,23 @@ export default function save({ attributes }) {
 				className: alignClasses,
 			})}
 		>
-			{!gbButtonWidth && (
-				<>
-					<div className="wp-block-multiple-blocks-gb-button__wrapper">
-						<div className="wp-block-multiple-blocks-gb-button__btn">
-							<RichText.Content
-								className="wp-block-multiple-blocks-gb-button__btn-text"
-								href={url}
-								title={title}
-								value={text}
-								tagName="a"
-							/>
-						</div>
+			<>
+				<div className="wp-block-multiple-blocks-gb-button__wrapper">
+					<div
+						className={`wp-block-multiple-blocks-gb-button__btn ${
+							gbButtonWidth ? 'full-width' : ''
+						}`}
+					>
+						<RichText.Content />
+						<a
+							href={url}
+							className="wp-block-multiple-blocks-gb-button__btn-text"
+						>
+							{text}
+						</a>
 					</div>
-				</>
-			)}
-			{gbButtonWidth && (
-				<>
-					<div className="wp-block-multiple-blocks-gb-button__wrapper">
-						<div className="wp-block-multiple-blocks-gb-button__btn full-width">
-							<RichText.Content
-								className="wp-block-multiple-blocks-gb-button__btn-text"
-								href={url}
-								title={title}
-								value={text}
-								tagName="a"
-							/>
-						</div>
-					</div>
-				</>
-			)}
+				</div>
+			</>
 		</div>
 	);
 }

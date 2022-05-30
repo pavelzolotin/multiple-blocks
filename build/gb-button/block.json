@@ -8,7 +8,8 @@
 	"description": "A button block.",
 	"keywords": ["block", "button"],
 	"supports": {
-		"html": false
+		"html": false,
+		"anchor": true
 	},
 	"textdomain": "multiple-blocks",
 	"editorScript": "file:./index.js",

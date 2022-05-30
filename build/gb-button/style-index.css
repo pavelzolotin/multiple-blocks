@@ -48,19 +48,29 @@
   cursor: pointer;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.wp-block-multiple-blocks-gb-button__btn a {
+  font-size: 24px;
+  color: #fff;
+  text-decoration: none;
+}
 .wp-block-multiple-blocks-gb-button__btn:hover {
   background: linear-gradient(135deg, #3199a2 0%, #3199a2 9.23%, #45c7d2 100%);
   box-shadow: 0 0 30px -8px #3eb9c3;
-  color: #fff;
-}
-.wp-block-multiple-blocks-gb-button__btn-text {
-  font-size: 24px;
   color: #fff;
 }
 
 .full-width {
   width: 100%;
   padding: 0;
+}
+
+.wp-block-multiple-blocks-gb-button {
+  width: 100%;
+  height: 100%;
+}
+.wp-block-multiple-blocks-gb-button:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce) > .wp-block-multiple-blocks-gb-button__wrapper > .wp-block-multiple-blocks-gb-button__btn > a:focus {
+  background: none;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style-index.css.map*/
