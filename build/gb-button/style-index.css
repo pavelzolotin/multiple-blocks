@@ -40,7 +40,6 @@
   border-radius: 4px;
   background: linear-gradient(135.46deg, #45c7d2 0%, #3199a2 100%);
   box-shadow: 0 0 30px -8px #3eb9c3;
-  padding: 0 72px;
   color: #fff;
   line-height: 60px;
   text-align: center;
@@ -50,6 +49,7 @@
 }
 .wp-block-multiple-blocks-gb-button__btn a {
   font-size: 24px;
+  padding: 14px 72px;
   color: #fff;
   text-decoration: none;
 }
